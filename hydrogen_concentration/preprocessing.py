@@ -22,9 +22,6 @@ def performDataProcessing(data_fpath:str,output_dir:str)-> None:
     df.to_csv(f'{output_dir}/processed_data.csv',index=False)
     return
 
-
-
-
 if __name__=='__main__':
     data_fp='hydrogen_concentration/data/data.csv'
     output_dir='hydrogen_concentration/data'
