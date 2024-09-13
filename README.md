@@ -80,15 +80,10 @@ This project uses `Poetry` for dependency management and packaging. Follow the s
    curl -sSL https://install.python-poetry.org | python3 -
    ```
 
-2. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/hydrogen_concentration.git
-   cd hydrogen_concentration
-   ```
+2. Download the repository:
 
 3. Install the dependencies:
-
+Go to hydrogen_concentration folder (this folder contains the pyproject.Toml file that highlights all the necessary libraries and dependancies) and run the following commend. It will install all the necessary libraries.
    ```bash
    poetry install
    ```
