@@ -24,7 +24,22 @@ root/
 
 3. **`train.py`**: A Python script responsible for training the machine learning model using the preprocessed data and saving the trained model for future use. 
 
-## Approach Overview
+### Reason for `train.py` and `preprocessing.py` Scripts
+
+To ensure modularity and maintainability, the project’s codebase was split into the following two scripts:
+
+1. **`preprocessing.py`**:
+   - This script was created to encapsulate all the data preprocessing steps that were initially performed in the `data_analysis.ipynb` notebook. By moving the preprocessing logic into its own script, it becomes easier to maintain, test, and reuse across different parts of the project or even in a production pipeline.
+   - This separation allows the preprocessing to be handled independently, making the codebase more modular and flexible for future changes or adaptations without needing to rerun the entire notebook.
+
+2. **`train.py`**:
+   - The training process was modularized into this script to allow for a clear distinction between preprocessing and model training. 
+   - With `train.py`, the model can be trained in a standalone manner using the preprocessed data, and the final model can be saved for future use. This is particularly useful for moving the training process into a production pipeline, where the model can be retrained or evaluated with minimal changes to the codebase.
+   - Separating model training from exploratory analysis also enables automated training workflows or model tuning without the need for human intervention via a notebook interface.
+
+By creating these scripts, the project structure becomes cleaner and better suited for both development and deployment environments, allowing for easier scaling, reuse, and maintenance.
+
+# Approach Overview
 
 The following steps were performed to create the predictive model:
 
